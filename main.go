@@ -3,6 +3,7 @@ package main
 import (
 	"encoding/json"
 	"fmt"
+	"log"
 	"net/http"
 	"os"
 
@@ -73,5 +74,5 @@ func main() {
 			"message": "pong",
 		})
 	})
-	r.Run(":1500")
+	log.Fatal(r.Run(":1500"))
 }
